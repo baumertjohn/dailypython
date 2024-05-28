@@ -1,0 +1,48 @@
+1. Project Brief
+
+Your task for this project is to create a command line-based diary program.
+2. Project Instructions
+
+    Write a program that:
+
+        Asks the user to enter the notes of today:
+        	
+        	
+
+        The user can type in a line, press Enter, type in the next line, press Enter, and so on.
+
+        If the user types in “exit” and presses Enter, the program exits.
+
+        When the program exits, the notes are saved in a text file. The name of the text file should be today’s date (e.g., 2024-03-20.txt).
+
+3. Project Expected Output
+
+The expected output is a generated text file that contains the user notes for today. Here is an example:
+	
+	
+4. Environment Setup Instructions (in your local IDE)
+
+👉 Skip to the next step if you prefer to code this project in an online browser-based IDE or from your mobile phone.
+
+    You don’t need to install any libraries for this project.
+
+    To run the code, execute the main.py file with:
+    python main.py
+
+Upgrade to paid
+5. Environment Setup Instructions (in an online IDE as alternative)
+
+Prefer an online IDE? Use this cloud IDE link to start coding immediately with a pre-configured environment. The environment has the input files already uploaded.
+6. Resources
+
+Getting today’s date and formatting it:
+
+https://pythonhow.com/how/get-todays-date-and-convert-to-string/
+
+Creating a text file:
+
+https://pythonhow.com/how/create-a-text-file-with-and-write-text-on-it/
+7. Project Solution
+
+Note that the solution below might differ from your code and it might use different libraries, if any. As long as your output is similar to the expected output, your solution is considered correct.👍
+main.py:...

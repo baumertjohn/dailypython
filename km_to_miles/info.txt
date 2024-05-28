@@ -1,0 +1,9 @@
+1. Project Brief
+
+Your task for this project is to create a desktop program that converts kilometers to miles.
+The program should have a desktop GUI. You can use any Python GUI library,
+but the code given in the solution section uses the Tkinter library.
+
+2. Project Expected Output
+Note that your GUI might look different, but its functionality should be
+similar to the following snapshot. 
