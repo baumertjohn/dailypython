@@ -7,7 +7,7 @@ FOLDER = "files"
 def make_files():
     """Creates 26 empty text files, one for each letter of the alphabet (a-z)."""
     os.makedirs(FOLDER, exist_ok=True)
-    for x in range(26):
+    for x in range(5):
         with open(f"{FOLDER}/{chr(x+97)}.txt", "w") as f:
             f.write("")
 
@@ -29,6 +29,8 @@ def change_file_name(file_list):
         prefix, ext = file[:-4], file[-4:]
         new_file_name = f"{prefix}-{today}{ext}"
         os.rename(file, new_file_name)
+        print(f"Renamed '{file[6:]}' to '{new_file_name[6:]}'")
+    print("File renaming completed.")
 
 
 def main():
