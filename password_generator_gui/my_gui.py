@@ -7,8 +7,6 @@ from PyQt5.QtWidgets import (
     QPushButton,
     QVBoxLayout,
     QHBoxLayout,
-    QSpacerItem,
-    QSizePolicy,
 )
 from PyQt5.QtCore import Qt  # Import Qt for alignment
 from PyQt5.QtGui import QFont, QColor, QPalette  # For styling
@@ -21,7 +19,13 @@ class MyWindow(QWidget):
 
     def init_ui(self):
         self.setWindowTitle("My Styled PyQt5 GUI")
-        self.setGeometry(100, 100, 500, 300)  # (x, y, width, height)
+        initial_width = 500
+        initial_height = 300
+        self.setGeometry(
+            100, 100, initial_width, initial_height
+        )  # (x, y, width, height)
+
+        self.setFixedSize(initial_width, initial_height)
 
         # Style the window background
         palette = self.palette()
@@ -93,6 +97,8 @@ class MyWindow(QWidget):
 
         # Connect the button "clicked" signal to "process_text" slot
         self.process_button.clicked.connect(self.process_text)
+        # Connect QLineEdit's returnPressed signal to button's click method
+        self.name_input.returnPressed.connect(self.process_button.click)
 
         main_layout.addStretch(1)  # This pushes all content towards the top
         self.setLayout(main_layout)
@@ -101,6 +107,8 @@ class MyWindow(QWidget):
         # Slot function
         input_text = self.name_input.text()
         print(f"Processed text: {input_text}")
+        self.name_input.clear()
+        self.name_input.setFocus()
 
 
 def main():
