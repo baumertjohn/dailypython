@@ -1,6 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout
-from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton
 
 
 def main():
@@ -25,14 +24,8 @@ def main():
     process_button = QPushButton("Process Test", window)
     process_button.move(150, 100)
 
-    #window1 = QWidget()
-    #window1.setWindowTitle("My Second PyQt5 GUI")
-    #window1.setGeometry(1000, 600, 400, 200)  # (x, y, width, height)
-
-
     # 3. Show the window
     window.show()
-    #window1.show()
 
     # 4. Start the application's event loop
     sys.exit(app.exec_())
